@@ -52,8 +52,8 @@ def visualize_data(df):
     
     fields = ['varience', 'skewness', 'curtosis', 'entropy']
     x = alt.Chart(df).mark_point().encode(
-    alt.X(alt.repeat("column"), type='float'),
-    alt.Y(alt.repeat("row"), type='float'),
+    alt.X(alt.repeat("column"), type='quantitative'),
+    alt.Y(alt.repeat("row"), type='quantitative'),
     color='class'
     ).properties(
     width=200,
