@@ -1,6 +1,7 @@
-import data from vega-datasets
+from vega-datasets import data 
 import streamlit as st
 import altair as alt
+import pandas as pd
 
 def main():
     df = load_data()
@@ -18,7 +19,7 @@ def main():
 
 @st.cache
 def load_data():
-    df = data.cars()
+    df = pd.read_csv('preprocessing_data_banknote_authentication.csv')
     return df
 
 def visualize_data(df, x_axis, y_axis):
