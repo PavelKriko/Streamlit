@@ -2,11 +2,14 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 import numpy as np
-
+from sklearn.tree import DecisionTreeClassifier
 
 def main():
     df = load_data()
-    page = st.sidebar.selectbox("Choose a page", ["Homepage", "Exploration"])
+    page = st.sidebar.selectbox("Choose a page", ["Homepage", "Exploration","Model"])
+    
+    with open('myfile.pkl', 'rb') as pkl_file:
+        tree_from_file = pickle.load(pkl_file)
 
     if page == "Homepage":
         st.header("Данные для задачи классификации банкнот.")
@@ -19,6 +22,8 @@ def main():
     elif page == "Exploration":
         st.title("Data Exploration")
         visualize_data(df)
+    else:
+        st.title("Model")
 
 @st.cache
 def load_data():
