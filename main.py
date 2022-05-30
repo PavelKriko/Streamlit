@@ -25,6 +25,7 @@ def main():
         visualize_data(df)
     else:
         st.title("Model ")
+        
 
 @st.cache
 def load_data():
