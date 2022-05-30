@@ -25,7 +25,7 @@ def main():
         visualize_data(df)
     else:
         st.title("Model")
-        varience = streamlit.slider("variance: ", min_value=df['variance'].min(),   
+        varience = st.slider("variance: ", min_value=df['variance'].min(),   
                        max_value=df['variance'].max(), value=min_value, step=1)
         
 
