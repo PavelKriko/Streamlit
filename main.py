@@ -23,7 +23,7 @@ def main():
         st.title("Data Exploration")
         visualize_data(df)
     else:
-        st.title("Model")
+        st.title("Model ")
 
 @st.cache
 def load_data():
