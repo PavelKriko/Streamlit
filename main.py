@@ -18,9 +18,7 @@ def main():
         st.write(df)
     elif page == "Exploration":
         st.title("Data Exploration")
-        x_axis = st.selectbox("Choose a variable for the x-axis", df.columns, index=0)
-        y_axis = st.selectbox("Choose a variable for the y-axis", df.columns, index=1)
-        visualize_data(df, x_axis, y_axis)
+        visualize_data(df)
 
 @st.cache
 def load_data():
@@ -30,7 +28,6 @@ def load_data():
 def visualize_data(df, x_axis, y_axis):
     c = alt.Chart(df).mark_circle().encode(x='variance', y='skewness', size='class',  
                                        color='c')
-    st.altair_chart(c, width=-1)
     st.write(graph)
 
 if __name__ == "__main__":
