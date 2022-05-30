@@ -51,7 +51,7 @@ def visualize_data(df):
     st.write(c)
     
     fields = ['varience', 'skewness', 'curtosis', 'entropy']
-    alt.Chart(iris).mark_point().encode(
+    alt.Chart(df).mark_point().encode(
     alt.X(alt.repeat("column"), type='quantitative'),
     alt.Y(alt.repeat("row"), type='quantitative'),
     color='species'
