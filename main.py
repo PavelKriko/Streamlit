@@ -25,7 +25,7 @@ def load_data():
     df = pd.read_csv('preprocessing_data_banknote_authentication.csv')
     return df
 
-def visualize_data(df, x_axis, y_axis):
+def visualize_data(df):
     c = alt.Chart(df).mark_circle().encode(x='variance', y='skewness', size='class',  
                                        color='c')
     st.write(graph)
