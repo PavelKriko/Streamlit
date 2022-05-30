@@ -3,6 +3,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
+import pickle
 
 def main():
     df = load_data()
