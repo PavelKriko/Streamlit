@@ -51,7 +51,7 @@ def visualize_data(df):
     st.write(c)
     
     fields = ['varience', 'skewness', 'curtosis', 'entropy']
-    alt.Chart(df).mark_point().encode(
+    x = alt.Chart(df).mark_point().encode(
     alt.X(alt.repeat("column"), type='quantitative'),
     alt.Y(alt.repeat("row"), type='quantitative'),
     color='species'
@@ -62,6 +62,7 @@ def visualize_data(df):
     row=fields,
     column=fields[::-1]
     ).interactive()
+    st.write(x)
 
 if __name__ == "__main__":
     main()
