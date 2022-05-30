@@ -1,4 +1,4 @@
-import data from 'vega-datasets'
+import data from vega-datasets
 import streamlit as st
 import altair as alt
 
