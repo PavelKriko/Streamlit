@@ -54,7 +54,7 @@ def visualize_data(df):
     x = alt.Chart(df).mark_point().encode(
     alt.X(alt.repeat("column"), type='float'),
     alt.Y(alt.repeat("row"), type='float'),
-    color='species'
+    color='class'
     ).properties(
     width=200,
     height=200
