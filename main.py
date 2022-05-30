@@ -28,7 +28,7 @@ def load_data():
 def visualize_data(df):
     c = alt.Chart(df).mark_circle().encode(x='variance', y='skewness', size='class',  
                                        color='c')
-    st.write(graph)
+    st.altair_chart(c, width=-1)
 
 if __name__ == "__main__":
     main()
