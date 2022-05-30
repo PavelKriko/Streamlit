@@ -7,8 +7,12 @@ def main():
     page = st.sidebar.selectbox("Choose a page", ["Homepage", "Exploration"])
 
     if page == "Homepage":
-        st.header("This is your data explorer.")
-        st.write("Please select a page on the left.")
+        st.header("Данные для задачи классификации банкнот.")
+        st.write("Данные для датасета были извлечены из изображений, снятых с подлинных и поддельных банкнотоподобных образцов. Для оцифровки использовалась промышленная камера, обычно используемая для проверки печати.Инструмент Wavelet Transform использовался для извлечения признаков из изображений.")
+        st.write("variance of Wavelet Transformed image (дисперсия вейвлет-преобразованного изображения), тип вещественный.")
+        st.write("skewness of Wavelet Transformed image (асимметрия вейвлет-преобразованного изображения), тип вещественный.")
+        st.write("curtosis of Wavelet Transformed image (эксцесс преобразованного изображения), тип вещественный.")
+        st.write("entropy of image (энтропия изображения), тип вещественный.")
         st.write(df)
     elif page == "Exploration":
         st.title("Data Exploration")
