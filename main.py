@@ -33,7 +33,7 @@ def main():
                        max_value=df['curtosis'].max(), value=0.0, step=0.01)
         entropy = st.slider("entropy: ", min_value=df['entropy'].min(),   
                        max_value=df['entropy'].max(), value=0.0, step=0.01)
-        st.write(tree_from_file.predict(np.array([varience,skewness,curtosis,entropy]).reshape(4,)))
+        st.write(np.array([varience,skewness,curtosis,entropy]).reshape(4,))
         
 
 @st.cache
