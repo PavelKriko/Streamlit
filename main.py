@@ -1,6 +1,14 @@
 import streamlit as st
 import altair as alt
 import pandas as pd
+import numpy as np
+
+
+df = pd.DataFrame(np.random.randn(200, 3), columns=['a', 'b', 'c'])
+c = alt.Chart(df).mark_circle().encode(x='a', y='b', size='c',  
+                                       color='c')
+st.altair_chart(c, width=-1)
+```
 
 def main():
     df = load_data()
@@ -26,13 +34,9 @@ def load_data():
     return df
 
 def visualize_data(df, x_axis, y_axis):
-    graph = alt.Chart(df).mark_circle(size=60).encode(
-        x=x_axis,
-        y=y_axis,
-        color='Origin',
-        tooltip=["variance","skewness",	"curtosis",	"entropy","class"]
-    ).interactive()
-
+    c = alt.Chart(df).mark_circle().encode(x='variance', y='skewness', size='class',  
+                                       color='c')
+    st.altair_chart(c, width=-1)
     st.write(graph)
 
 if __name__ == "__main__":
