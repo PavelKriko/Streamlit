@@ -26,7 +26,7 @@ def main():
     else:
         st.title("Model")
         varience = st.slider("variance: ", min_value=df['variance'].min(),   
-                       max_value=df['variance'].max(), value=min_value, step=1)
+                       max_value=df['variance'].max(), value=0, step=1)
         
 
 @st.cache
