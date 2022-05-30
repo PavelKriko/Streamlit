@@ -50,7 +50,7 @@ def visualize_data(df):
                                        color='class')
     st.write(c)
     
-    fields = ['varience', 'skewness', 'class']
+    fields = ['varience', 'skewness']
     x = alt.Chart(df).mark_point().encode(
     alt.X(alt.repeat("column"), type='quantitative'),
     alt.Y(alt.repeat("row"), type='quantitative'),
