@@ -12,8 +12,8 @@ def main():
         st.write(df)
     elif page == "Exploration":
         st.title("Data Exploration")
-        x_axis = st.selectbox("Choose a variable for the x-axis", df.columns, index=3)
-        y_axis = st.selectbox("Choose a variable for the y-axis", df.columns, index=4)
+        x_axis = st.selectbox("Choose a variable for the x-axis", df.columns, index=0)
+        y_axis = st.selectbox("Choose a variable for the y-axis", df.columns, index=1)
         visualize_data(df, x_axis, y_axis)
 
 @st.cache
