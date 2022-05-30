@@ -4,12 +4,6 @@ import pandas as pd
 import numpy as np
 
 
-df = pd.DataFrame(np.random.randn(200, 3), columns=['a', 'b', 'c'])
-c = alt.Chart(df).mark_circle().encode(x='a', y='b', size='c',  
-                                       color='c')
-st.altair_chart(c, width=-1)
-```
-
 def main():
     df = load_data()
     page = st.sidebar.selectbox("Choose a page", ["Homepage", "Exploration"])
