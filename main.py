@@ -26,7 +26,7 @@ def visualize_data(df, x_axis, y_axis):
         x=x_axis,
         y=y_axis,
         color='Origin',
-        tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
+        tooltip=["variance","skewness",	"curtosis",	"entropy","class"]
     ).interactive()
 
     st.write(graph)
