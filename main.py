@@ -27,6 +27,12 @@ def main():
         st.title("Model")
         varience = st.slider("variance: ", min_value=df['variance'].min(),   
                        max_value=df['variance'].max(), value=0.0, step=0.1)
+        skewness = st.slider("variance: ", min_value=df['skewness'].min(),   
+                       max_value=df['skewness'].max(), value=0.0, step=0.1)
+        curtosis = st.slider("variance: ", min_value=df['curtosis'].min(),   
+                       max_value=df['curtosis'].max(), value=0.0, step=0.1)
+        entropy = st.slider("variance: ", min_value=df['entropy'].min(),   
+                       max_value=df['entropy'].max(), value=0.0, step=0.1)
         
 
 @st.cache
