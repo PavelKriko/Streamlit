@@ -50,19 +50,19 @@ def visualize_data(df):
                                        color='class')
     st.write(c)
     
-    fields = ['varience', 'skewness']
-    x = alt.Chart(df).mark_point().encode(
-    alt.X(alt.repeat("column"), type='quantitative'),
-    alt.Y(alt.repeat("row"), type='quantitative'),
-    color='class'
-    ).properties(
-    width=200,
-    height=200
-    ).repeat(
-    row=fields,
-    column=fields[::-1]
-    ).interactive()
-    st.write(x)
+    #fields = ['varience', 'skewness']
+    #x = alt.Chart(df).mark_point().encode(
+    #alt.X(alt.repeat("column"), type='quantitative'),
+    #alt.Y(alt.repeat("row"), type='quantitative'),
+    #color='class'
+    #).properties(
+    #width=200,
+    #height=200
+    #).repeat(
+    #row=fields,
+    #column=fields[::-1]
+    #).interactive()
+    #st.write(x)
 
 if __name__ == "__main__":
     main()
