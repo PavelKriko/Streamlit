@@ -26,13 +26,14 @@ def main():
     else:
         st.title("Model")
         varience = st.slider("variance: ", min_value=df['variance'].min(),   
-                       max_value=df['variance'].max(), value=0.0, step=0.1)
-        skewness = st.slider("variance: ", min_value=df['skewness'].min(),   
-                       max_value=df['skewness'].max(), value=0.0, step=0.1)
-        curtosis = st.slider("variance: ", min_value=df['curtosis'].min(),   
-                       max_value=df['curtosis'].max(), value=0.0, step=0.1)
-        entropy = st.slider("variance: ", min_value=df['entropy'].min(),   
-                       max_value=df['entropy'].max(), value=0.0, step=0.1)
+                       max_value=df['variance'].max(), value=0.0, step=0.01)
+        skewness = st.slider("skewness: ", min_value=df['skewness'].min(),   
+                       max_value=df['skewness'].max(), value=0.0, step=0.01)
+        curtosis = st.slider("curtosis: ", min_value=df['curtosis'].min(),   
+                       max_value=df['curtosis'].max(), value=0.0, step=0.01)
+        entropy = st.slider("entropy: ", min_value=df['entropy'].min(),   
+                       max_value=df['entropy'].max(), value=0.0, step=0.01)
+        st.write(tree_from_file.predict([varience,skewness,curtosis,entropy]))
         
 
 @st.cache
